@@ -6,10 +6,19 @@ import androidx.cardview.widget.CardView;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private CardView cvWalking, cvBoat, cvPlane, cvTrain, cvBike, cvBus;
+    private TextView tvBrand, tvSlogan;
+    private ImageView ivLogo;
+
+    // Animations
+    Animation logoAnimation, textAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
         cvTrain = findViewById(R.id.cv_train);
         cvBike = findViewById(R.id.cv_bike);
         cvBus = findViewById(R.id.cv_bus);
+
+        // init animation
+        logoAnimation = AnimationUtils.loadAnimation(this, R.anim.logo_animation);
+        textAnimation = AnimationUtils.loadAnimation(this, R.anim.text_animation);
+        tvBrand = findViewById(R.id.tv_brand);
+        tvSlogan = findViewById(R.id.tv_slogan);
+        ivLogo = findViewById(R.id.iv_logo);
+        tvBrand.setAnimation(textAnimation);
+        tvSlogan.setAnimation(textAnimation);
+        ivLogo.setAnimation(logoAnimation);
 
         cvWalking.setOnClickListener(new View.OnClickListener() {
             @Override

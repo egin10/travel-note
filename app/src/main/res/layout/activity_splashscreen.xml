@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashscreenActivity"
-    android:orientation="vertical">
+    tools:context=".SplashscreenActivity">
 
     <RelativeLayout
+        android:id="@+id/relativeLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:layout_marginTop="60dp"
-        android:paddingTop="50dp">
-
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
         <ImageView
             android:id="@+id/travel_logo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/travel_logo"
-            android:layout_centerInParent="true"/>
-
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/travel_logo" />
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp">
-
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2">
         <TextView
             android:id="@+id/travel_text"
             android:layout_width="match_parent"
@@ -37,13 +42,17 @@
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
-
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="150dp">
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout3">
 
         <TextView
             android:id="@+id/travel_dev"
@@ -56,4 +65,4 @@
 
     </RelativeLayout>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
