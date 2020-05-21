@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30dp"
-        android:paddingVertical="50dp">
+        android:layout_marginTop="60dp"
+        android:paddingTop="50dp">
 
         <ImageView
             android:id="@+id/travel_logo"
@@ -36,6 +37,22 @@
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp">
+
+        <TextView
+            android:id="@+id/travel_dev"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bad_script"
+            android:text="Android Developer"
+            android:textAlignment="center"
+            android:textSize="20dp" />
 
     </RelativeLayout>
 

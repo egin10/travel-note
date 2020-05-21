@@ -16,7 +16,7 @@ public class SplashscreenActivity extends AppCompatActivity {
 
     // Hooks
     private ImageView ivTravelLogo;
-    private TextView tvTravelText;
+    private TextView tvTravelText, tvTravelDev;
 
     // Animations
     Animation logoAnimation, textAnimation;
@@ -33,10 +33,12 @@ public class SplashscreenActivity extends AppCompatActivity {
 
         ivTravelLogo = findViewById(R.id.travel_logo);
         tvTravelText = findViewById(R.id.travel_text);
+        tvTravelDev = findViewById(R.id.travel_dev);
 
         // set animation
         ivTravelLogo.setAnimation(logoAnimation);
         tvTravelText.setAnimation(textAnimation);
+        tvTravelDev.setAnimation(textAnimation);
 
         new Handler().postDelayed(new Runnable() {
             @Override
