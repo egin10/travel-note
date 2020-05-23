@@ -1,4 +1,4 @@
-package id.abonsapi.moderndesignui;
+package id.abonsapi.moderndesignui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import id.abonsapi.moderndesignui.R;
 
 public class SplashscreenActivity extends AppCompatActivity {
     private static int SPLASH_SCREEN_TIMEOUT = 5000;

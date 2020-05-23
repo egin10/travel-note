@@ -1,10 +1,10 @@
-package id.abonsapi.moderndesignui;
+package id.abonsapi.moderndesignui.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -12,13 +12,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import id.abonsapi.moderndesignui.R;
+
 public class MainActivity extends AppCompatActivity {
     private CardView cvWalking, cvBoat, cvPlane, cvTrain, cvBike, cvBus;
     private TextView tvBrand, tvSlogan;
     private ImageView ivLogo;
 
     // Animations
-    Animation logoAnimation, textAnimation;
+    private Animation logoAnimation, textAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,42 +47,48 @@ public class MainActivity extends AppCompatActivity {
         cvWalking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Walking on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, WalkingActivity.class);
+                startActivity(intent);
             }
         });
 
         cvBoat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Boat on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, BoatActivity.class);
+                startActivity(intent);
             }
         });
 
         cvPlane.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Plane on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, PlaneActivity.class);
+                startActivity(intent);
             }
         });
 
         cvTrain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Train on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, TrainActivity.class);
+                startActivity(intent);
             }
         });
 
         cvBike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Bike on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, BikeActivity.class);
+                startActivity(intent);
             }
         });
 
         cvBus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Bus on Click!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, BusActivity.class);
+                startActivity(intent);
             }
         });
     }
